@@ -18,7 +18,7 @@ app.post('/api/contact', async (req, res) => {
   }
   const required = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS', 'CONTACT_TO', 'MAIL_FROM'];
   const missing = required.filter((key) => !process.env[key]);
-  if (missing.length) return res.status(503).json({ error: 'Contact form email is not configured yet. Please use the email or phone listed on this page.' });
+  if (missing.length) return res.status(503).json({ error: 'Contact form email is not configured yet. Please message Saakhuvan on Instagram.' });
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -36,7 +36,7 @@ app.post('/api/contact', async (req, res) => {
     return res.json({ ok: true });
   } catch (err) {
     console.error('Contact email failed:', err.message);
-    return res.status(502).json({ error: 'We could not send your message right now. Please email or call us directly.' });
+    return res.status(502).json({ error: 'We could not send your message right now. Please message Saakhuvan on Instagram.' });
   }
 });
 
