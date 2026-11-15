@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import nodemailer from 'nodemailer';
+import path from 'node:path';
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -39,5 +40,8 @@ app.post('/api/contact', async (req, res) => {
     return res.status(502).json({ error: 'We could not send your message right now. Please message Saakhuvan on Instagram.' });
   }
 });
+
+app.use(express.static(path.resolve('dist')));
+app.get(/.*/, (_req, res) => res.sendFile(path.resolve('dist/index.html')));
 
 app.listen(port, () => console.log(`Contact service listening on http://localhost:${port}`));
