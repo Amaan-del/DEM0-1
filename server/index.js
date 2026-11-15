@@ -30,7 +30,7 @@ app.post('/api/contact', async (req, res) => {
       from: process.env.MAIL_FROM,
       to: process.env.CONTACT_TO,
       replyTo: { name: name.trim(), address: email.trim() },
-      subject: `Aster House enquiry: ${String(subject).slice(0, 120)}`,
+      subject: `Saakhuvan enquiry: ${String(subject).slice(0, 120)}`,
       text: `Name: ${name.trim()}\nEmail: ${email.trim()}\nPhone: ${phone.trim() || 'Not provided'}\nTopic: ${String(subject).slice(0, 120)}\n\n${message.trim()}`
     });
     return res.json({ ok: true });

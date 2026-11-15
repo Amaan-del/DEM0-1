@@ -1,6 +1,6 @@
-# Aster House — Hotel & Restaurant Portfolio
+# Saakhuvan Eco Retreat — Hotel & Restaurant Portfolio
 
-Responsive React portfolio concept for a boutique hotel and restaurant. The property, restaurant, imagery, hours, address, and contact information are demo content and should be replaced with client-approved details before publication.
+Responsive React portfolio for Saakhuvan Eco Retreat. It uses the logo and property photos supplied by the client. Restaurant photos were not included in the supplied set, so the restaurant area uses retreat and grounds photography. Opening hours, address, and contact information are demo content and should be replaced with client-approved details before publication.
 
 ## Run locally
 
@@ -12,4 +12,4 @@ The contact form posts to the local Express service. To enable email, copy `.env
 
 ## Replace demo details
 
-Update the Aster House name, address, phone, email, social account, and opening hours in `src/main.jsx`. Replace the Unsplash demo photos with client-approved property and food photography. Update the SEO title and description in `index.html`.
+Update the address, phone, email, social account, and opening hours in `src/main.jsx`. Replace or supplement the client photos in `public/client` as needed. Update the SEO title and description in `index.html`.
